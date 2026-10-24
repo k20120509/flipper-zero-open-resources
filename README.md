@@ -20,12 +20,3 @@ AIGC:
 - 审核标准：[docs/审核标准.md](docs/审核标准.md)
 - 免责声明：[docs/免责声明.md](docs/免责声明.md)
 *（内容由AI生成，仅供参考）*
-
-## 合作者（Contributors）
-
-本项目感谢以下所有合作者的贡献：
-
-<a href="https://github.com/k20120509"><img src="https://github.com/k20120509.png" width="50" height="50" alt="k20120509"/></a>
-<a href="https://github.com/0day0x0"><img src="https://github.com/0day0x0.png" width="50" height="50" alt="0day0x0"/></a>
-
-想加入？见 [docs/贡献指南.md](docs/贡献指南.md)，任何人都可以参与。
