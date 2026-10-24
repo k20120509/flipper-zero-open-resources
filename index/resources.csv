@@ -1,0 +1,15 @@
+名称,用途,类型,作者/来源,许可证,适用固件,更新时间,链接,状态,备注
+Flipper Zero 官方固件,官方稳定固件,固件,Flipper Devices,GPL-3.0,官方 Release,持续更新,https://github.com/flipperdevices/flipperzero-firmware,可用,最稳定
+Unleashed,社区固件 解锁区域Sub-GHz,固件,DarkFlippers,GPL-3.0,Unleashed Release,持续更新,https://github.com/DarkFlippers/unleashed-firmware,可用,社区稳定基线
+Momentum,界面完善可定制性强的固件,固件,Next-Flip,GPL-3.0,Momentum Release,2025.04,https://github.com/Next-Flip/Momentum-Firmware,可用,约183个预装应用
+RogueMaster,应用最多的社区固件,固件,RogueMaster,GPL-3.0,RogueMaster Release,持续更新,https://github.com/RogueMaster/flipperzero-firmware-wPlugins,可用,稳定性不可预测
+Momentum-Firmware-CN,中文固件分支,固件,中文社区,GPL-3.0,Momentum,持续更新,待补充,可用,QQ群716547787
+qFlipper,官方桌面管理/刷机工具,工具,Flipper Devices,免费（专有）,全部,持续更新,https://flipperzero.one/update,可用,Win/macOS/Linux
+Flipper Lab,浏览器安装应用/固件,工具,Flipper Devices,免费（专有）,全部,持续更新,https://lab.flipper.net,可用,Chrome/Edge Web Serial
+uFBT,FAP应用开发构建工具,工具,Flipper 社区,MIT,全部,持续更新,https://github.com/flipperdevices/flipperzero-ufbt,可用,编译/调试/部署
+fz-sdk,JS/TS应用开发SDK,工具,Flipper Devices,MIT,官方/Momentum,持续更新,https://github.com/flipperdevices/fz-sdk,可用,无需C语言
+官方文档,官方使用文档,教程,Flipper Devices,见官网,全部,持续更新,https://docs.flipper.net,可用,多语言
+Awesome Flipper,社区资源清单,社区,Flipper 社区,见仓库,全部,持续更新,https://github.com/djsime1/awesome-flipperzero,可用,资源导航
+官方论坛,官方多语言论坛,社区,Flipper Devices,-,全部,持续更新,https://forum.flipperzero.one,可用,提问交流
+r/flipperzero,Reddit 社区,社区,Reddit 用户,-,全部,持续更新,https://www.reddit.com/r/flipperzero/,可用,多语言
+Wi-Fi Developer Board,ESP32-S2扩展板资料,硬件资料,Flipper Devices,见仓库,全部,持续更新,https://docs.flipper.net/development/wifi-developer-board,可用,调试/烧录
