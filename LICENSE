@@ -1,0 +1,53 @@
+# LICENSE
+
+本仓库包含两类内容，分别适用不同许可证。
+
+## 1. 文档部分：CC BY-SA 4.0
+
+本仓库中所有文档（包括但不限于 README.md、README.en.md、README.ja.md、docs/ 目录下的全部 Markdown 文件、index/ 目录下的 Markdown 与 CSV 文件、.github/ 目录下的模板文件）采用：
+
+**知识共享署名-相同方式共享 4.0 国际（CC BY-SA 4.0）**
+
+许可证摘要：https://creativecommons.org/licenses/by-sa/4.0/deed.zh
+
+您可以：
+- 共享：在任何媒介以任何形式复制、发行本作品；
+- 演绎：修改、转换或以本作品为基础进行创作。
+
+惟须遵守下列条件：
+- 署名：必须给出适当的署名，提供指向本许可证的链接，并标明是否做了修改；
+- 相同方式共享：如果您基于本作品进行修改、转换或创作，您必须采用相同的许可证发布您的贡献。
+
+完整法律文本：https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+## 2. 代码部分：MIT License
+
+本仓库中的代码（包括但不限于 scripts/ 目录、*.py、*.js、*.sh 等脚本文件）采用：
+
+MIT License
+
+Copyright (c) 2026 flipper-zero-open-resources contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## 适用范围说明
+
+- 文档（Markdown、CSV、模板）→ CC BY-SA 4.0
+- 代码（脚本、程序源码）→ MIT
+- 第三方资源的版权归原作者所有，本仓库仅做索引与整理。
