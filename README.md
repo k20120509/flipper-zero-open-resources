@@ -11,9 +11,7 @@ AIGC:
 
 # Flipper Zero 开源资源导航与共享平台
 
-小白就看这里 👉 [docs/start-here.zh.md](docs/start-here.zh.md)
-
-多语言切换：[中文](README.md) | [English](README.en.md) | [日本語](README.ja.md)
+小白就看这里 👉 [docs/start-here.md](docs/start-here.md)
 
 把开源免费、许可证清晰、可合法共享的 Flipper Zero 固件、软件、工具、教程和硬件资料集中起来，由管理员审核整理，让小白和小孩也能快速找到当前可用、靠谱的资源。所有人都可以通过 Issue 和 PR 贡献。
 
