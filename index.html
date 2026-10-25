@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>首页 · Flipper 中文资源站</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#12122a;color:#eee;line-height:1.7}
+a{color:#4cc9f0}
+.container{max-width:1100px;margin:0 auto;padding:18px}
+h1{color:#ffd700;margin-bottom:14px}
+h2{color:#ffd700;font-size:1.2em;margin:24px 0 10px;border-left:4px solid #ffd700;padding-left:10px}
+.card{background:#16213e;border:1px solid #2a2a4a;border-radius:14px;padding:16px;margin-bottom:14px}
+.card h3{color:#ffd700;margin-bottom:6px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.btn{display:inline-block;text-decoration:none;padding:9px 16px;border-radius:8px;margin:4px 6px 4px 0;font-size:.92em}
+.btn-y{background:#ffd700;color:#12122a;font-weight:bold}
+.btn-b{background:#4cc9f0;color:#12122a}
+.btn-g{background:#2a2a4a;color:#ccc}
+.install-banner{background:#1e1e3f;border:2px solid #ffd700;border-radius:12px;padding:12px 16px;margin:16px 0;font-size:.92em}
+.install-banner code{background:#0d0d24;padding:2px 6px;border-radius:5px;color:#7adcff}
+.step{background:#0f0f22;border-left:4px solid #4cc9f0;border-radius:8px;padding:12px 14px;margin:10px 0}
+.step b{color:#4cc9f0}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9em}
+th,td{border:1px solid #2a2a4a;padding:8px 10px;text-align:left}
+th{background:#2a2a4a;color:#ffd700}
+tr:nth-child(even){background:#0f0f22}
+.badge{display:inline-block;font-size:.72em;padding:2px 8px;border-radius:20px;background:#2a2a4a;color:#ccc;margin-right:4px}
+.badge.hot{background:rgba(255,215,0,.15);color:#ffd700}
+footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
+
+</style><style>
+.topnav{background:#0d0d24;border-bottom:2px solid #ffd700;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;position:sticky;top:0;z-index:50;flex-wrap:wrap;gap:6px}
+.topnav .logo{color:#ffd700;font-weight:bold;font-size:1.1em;text-decoration:none}
+.topnav .navlinks{display:flex;gap:6px;flex-wrap:wrap}
+.topnav .navlinks a{color:#eee;text-decoration:none;font-size:.88em;padding:6px 10px;border-radius:8px}
+.topnav .navlinks a:hover{background:#2a2a4a;color:#ffd700}
+@media(max-width:600px){.topnav .navlinks{width:100%;justify-content:space-between}.topnav .navlinks a{font-size:.8em;padding:6px 4px}}
+</style></head><body>
+<div class="topnav" id="topnav">
+<a href="index.html" class="logo">🐬 Flipper 中文资源站</a>
+<div class="navlinks">
+<a href="index.html">首页</a><a href="guide.html">新手教程</a><a href="firmware.html">固件下载</a><a href="apps.html">应用商店</a><a href="resources.html">资源目录</a>
+</div>
+</div>
+<div class="container">
+<div style="text-align:center;padding:26px 0 6px"><h1 style="font-size:1.9em">🐬 Flipper Zero 中文资源站</h1>
+<p style="color:#aaa">面向小白的中文一站式资源导航 · 固件 / 应用 / 教程 / 群组</p></div>
+<div class="install-banner" id="installBanner">
+<b>📲 怎么把应用装到 Flipper Zero 设备上？</b> <span id="installTip">正在检测你的访问设备…</span>
+</div>
+<script>
+(function(){
+  var ua = navigator.userAgent || "";
+  var tip = document.getElementById("installTip");
+  var isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(ua);
+  if (isMobile) {
+    tip.innerHTML = "你用手机访问：先装官方 <b>Flipper Mobile App</b>（应用商店搜索），或用数据线连电脑。点卡片里的“⬇ 直接下载 fap”，把 .fap 放进 SD 卡 <code>apps</code> 目录，设备上打开 应用 菜单即可看到。";
+  } else {
+    tip.innerHTML = "你正在用电脑访问：装 <b>qFlipper</b>（<a href='https://flipperzero.one/downloads' target='_blank' style='color:#ffd700'>官网下载</a>）连上设备。点“⬇ 直接下载 fap”，在 qFlipper 文件管理里把 .fap 拖进设备 <code>apps</code> 目录，设备上打开 应用 菜单即可使用。";
+  }
+})();
+</script>
+<div class="grid2">
+<div class="card"><h3>📖 新手教程</h3><p>从拆箱、插卡、开机到刷固件的完整零基础说明，认真看完就能玩明白。</p><a class="btn btn-b" href="guide.html">从零开始学习</a></div>
+<div class="card"><h3>⬇ 固件下载</h3><p>官方 / Unleashed / RogueMaster / Momentum / 中文汉化固件，一键直达最新版。</p><a class="btn btn-b" href="firmware.html">固件下载与对比</a></div>
+<div class="card"><h3>📦 应用商店</h3><p>官方全部 503 个应用，全中文名+分类浏览+图标截图，官方编译版直接下载。</p><a class="btn btn-y" href="apps.html">打开应用商店</a></div>
+<div class="card"><h3>🗂 资源目录</h3><p>红外库、Sub-GHz 数据库、BadUSB、awesome 合集、QQ 交流群，分类直达。</p><a class="btn btn-b" href="resources.html">浏览资源目录</a></div>
+</div>
+<h2>热门固件</h2><div class="grid2">
+<div class="card"><h3>🔧 官方固件 1.5.1</h3><p>稳定、安全、官方支持。适合刚上手的新手。</p><a class="btn btn-y" href="firmware.html">查看与下载</a></div>
+<div class="card"><h3>⚡ Unleashed</h3><p>解除官方限制、功能最全，社区人气第一。</p><a class="btn btn-y" href="firmware.html">最新版下载</a></div>
+<div class="card"><h3>🎮 RogueMaster</h3><p>插件最丰富、界面最花哨的“玩具箱”。</p><a class="btn btn-y" href="firmware.html">最新版下载</a></div>
+<div class="card"><h3>🛠 Momentum</h3><p>Xtreme 的延续，可定制性天花板。</p><a class="btn btn-y" href="firmware.html">最新版下载</a></div>
+</div>
+<h2>为什么推荐本站</h2>
+<div class="card"><ul style="padding-left:20px">
+<li><b>全中文</b>：应用商店 503 个应用全部中文名+中文简介；</li>
+<li><b>能下载</b>：固件、应用均为官方/仓库直链，点击即可下载；</li>
+<li><b>面向小白</b>：从零教程，看完就会；</li>
+<li><b>可追溯</b>：所有资源开源、来源明确，附原始链接。</li>
+</ul></div>
+
+<footer>本站由社区爱好者整理 · 仅供学习交流 · 请遵守当地法律法规，仅测试自己拥有或已获授权的设备</footer>
+</div></body></html>
