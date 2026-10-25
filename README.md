@@ -49,3 +49,15 @@ AIGC:
 | **合计** | **504** |  |
 
 > 提示：在手机/电脑上打开 search.html 即可搜索全部应用；每个分类文档内含该分类全部应用的中文介绍与安装链接。
+## 🌐 在线搜索站（GitHub Pages）
+
+打开就是可用网页，支持搜索与分类筛选：
+
+- **在线搜索站**：https://k20120509.github.io/flipper-zero-open-resources/ （推荐手机/电脑直接访问）
+
+## 📦 发布版本（Releases 全量数据包）
+
+所有重要资源会随每次更新打包进 Release，直接下载：
+
+- **最新发布**：https://github.com/k20120509/flipper-zero-open-resources/releases/latest
+- **数据包**：flipper-apps-full-zh.zip（含 11 个分类文档 + apps.json 全量 504 条 + search.html 搜索页）
