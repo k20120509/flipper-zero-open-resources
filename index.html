@@ -2,38 +2,51 @@
 <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>首页 · Flipper 中文资源站</title>
 <style>
+:root{--orange:#ff7d00;--orange2:#ff9d3c;--bg:#0d0d0d;--card:#171717;--card2:#1f1f1f;--line:#333;--txt:#f2f2f2;--sub:#9a9a9a}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#12122a;color:#eee;line-height:1.7}
-a{color:#4cc9f0}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.7}
+a{color:var(--orange2)}
 .container{max-width:1100px;margin:0 auto;padding:18px}
-h1{color:#ffd700;margin-bottom:14px}
-h2{color:#ffd700;font-size:1.2em;margin:24px 0 10px;border-left:4px solid #ffd700;padding-left:10px}
-.card{background:#16213e;border:1px solid #2a2a4a;border-radius:14px;padding:16px;margin-bottom:14px}
-.card h3{color:#ffd700;margin-bottom:6px}
+h1{color:var(--orange);margin-bottom:14px;text-shadow:0 0 30px rgba(255,125,0,.25)}
+h2{color:var(--orange);font-size:1.2em;margin:26px 0 10px;border-left:4px solid var(--orange);padding-left:10px}
+h3{color:var(--orange)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(255,125,0,.22);border-color:var(--orange)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
-.btn{display:inline-block;text-decoration:none;padding:9px 16px;border-radius:8px;margin:4px 6px 4px 0;font-size:.92em}
-.btn-y{background:#ffd700;color:#12122a;font-weight:bold}
-.btn-b{background:#4cc9f0;color:#12122a}
-.btn-g{background:#2a2a4a;color:#ccc}
-.install-banner{background:#1e1e3f;border:2px solid #ffd700;border-radius:12px;padding:12px 16px;margin:16px 0;font-size:.92em}
-.install-banner code{background:#0d0d24;padding:2px 6px;border-radius:5px;color:#7adcff}
-.step{background:#0f0f22;border-left:4px solid #4cc9f0;border-radius:8px;padding:12px 14px;margin:10px 0}
-.step b{color:#4cc9f0}
-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9em}
-th,td{border:1px solid #2a2a4a;padding:8px 10px;text-align:left}
-th{background:#2a2a4a;color:#ffd700}
-tr:nth-child(even){background:#0f0f22}
-.badge{display:inline-block;font-size:.72em;padding:2px 8px;border-radius:20px;background:#2a2a4a;color:#ccc;margin-right:4px}
-.badge.hot{background:rgba(255,215,0,.15);color:#ffd700}
-footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
-
-</style><style>
-.topnav{background:#0d0d24;border-bottom:2px solid #ffd700;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;position:sticky;top:0;z-index:50;flex-wrap:wrap;gap:6px}
-.topnav .logo{color:#ffd700;font-weight:bold;font-size:1.1em;text-decoration:none}
+.btn{display:inline-block;text-decoration:none;padding:10px 18px;border-radius:10px;margin:4px 6px 4px 0;font-size:.92em;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 6px 18px rgba(255,125,0,.4)}
+.btn-y{background:linear-gradient(135deg,#ff8c1a,#ff7d00);color:#111;font-weight:bold}
+.btn-b{background:linear-gradient(135deg,#ff9d3c,#ff7d00);color:#111}
+.btn-g{background:#262626;color:#ccc;border:1px solid var(--line)}
+.topnav{background:#0a0a0a;border-bottom:2px solid var(--orange);display:flex;justify-content:space-between;align-items:center;padding:10px 16px;position:sticky;top:0;z-index:50;flex-wrap:wrap;gap:6px;box-shadow:0 2px 14px rgba(255,125,0,.15)}
+.topnav .logo{color:var(--orange);font-weight:bold;font-size:1.1em;text-decoration:none}
 .topnav .navlinks{display:flex;gap:6px;flex-wrap:wrap}
-.topnav .navlinks a{color:#eee;text-decoration:none;font-size:.88em;padding:6px 10px;border-radius:8px}
-.topnav .navlinks a:hover{background:#2a2a4a;color:#ffd700}
+.topnav .navlinks a{color:#eee;text-decoration:none;font-size:.88em;padding:6px 10px;border-radius:8px;transition:.2s}
+.topnav .navlinks a:hover{background:var(--orange);color:#111;transform:translateY(-1px)}
 @media(max-width:600px){.topnav .navlinks{width:100%;justify-content:space-between}.topnav .navlinks a{font-size:.8em;padding:6px 4px}}
+.install-banner{background:linear-gradient(135deg,#1a1208,#241a08);border:2px solid var(--orange);border-radius:12px;padding:12px 16px;margin:16px 0;font-size:.92em;animation:fadeUp .6s ease}
+.install-banner code{background:#0a0a0a;padding:2px 6px;border-radius:5px;color:var(--orange2)}
+.step{background:#111;border-left:4px solid var(--orange);border-radius:8px;padding:12px 14px;margin:10px 0}
+.step b{color:var(--orange2)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9em}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+th{background:var(--card2);color:var(--orange)}
+tr:nth-child(even){background:#111}
+.badge{display:inline-block;font-size:.72em;padding:2px 8px;border-radius:20px;background:#2a2a2a;color:#ccc;margin-right:4px}
+.badge.hot{background:rgba(255,125,0,.18);color:var(--orange)}
+footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.fadeIn{animation:fadeUp .5s ease both}
+/* 折叠面板 accordion */
+.acc{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden;background:var(--card);transition:border-color .25s}
+.acc.open{border-color:var(--orange)}
+.acc-head{display:flex;justify-content:space-between;align-items:center;width:100%;background:var(--card2);color:var(--txt);border:none;padding:13px 16px;font-size:1em;cursor:pointer;font-weight:bold}
+.acc-head .arr{transition:transform .3s;color:var(--orange)}
+.acc.open .acc-head .arr{transform:rotate(90deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .5s ease;background:var(--card)}
+.acc.open .acc-body{max-height:2000px}
+.acc-inner{padding:14px 16px}
 </style></head><body>
 <div class="topnav" id="topnav">
 <a href="index.html" class="logo">🐬 Flipper 中文资源站</a>
@@ -42,8 +55,8 @@ footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
 </div>
 </div>
 <div class="container">
-<div style="text-align:center;padding:26px 0 6px"><h1 style="font-size:1.9em">🐬 Flipper Zero 中文资源站</h1>
-<p style="color:#aaa">面向小白的中文一站式资源导航 · 固件 / 应用 / 教程 / 群组</p></div>
+<div style="text-align:center;padding:26px 0 6px" class="fadeIn"><h1 style="font-size:1.9em">🐬 Flipper Zero 中文资源站</h1>
+<p style="color:#9a9a9a">面向小白的中文一站式资源导航 · 固件 / 应用 / 教程 / 群组</p></div>
 <div class="install-banner" id="installBanner">
 <b>📲 怎么把应用装到 Flipper Zero 设备上？</b> <span id="installTip">正在检测你的访问设备…</span>
 </div>
@@ -55,22 +68,21 @@ footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
   if (isMobile) {
     tip.innerHTML = "你用手机访问：先装官方 <b>Flipper Mobile App</b>（应用商店搜索），或用数据线连电脑。点卡片里的“⬇ 直接下载 fap”，把 .fap 放进 SD 卡 <code>apps</code> 目录，设备上打开 应用 菜单即可看到。";
   } else {
-    tip.innerHTML = "你正在用电脑访问：装 <b>qFlipper</b>（<a href='https://flipperzero.one/downloads' target='_blank' style='color:#ffd700'>官网下载</a>）连上设备。点“⬇ 直接下载 fap”，在 qFlipper 文件管理里把 .fap 拖进设备 <code>apps</code> 目录，设备上打开 应用 菜单即可使用。";
+    tip.innerHTML = "你正在用电脑访问：装 <b>qFlipper</b>（<a href='https://flipperzero.one/downloads' target='_blank' style='color:#ff9d3c'>官网下载</a>）连上设备。点“⬇ 直接下载 fap”，在 qFlipper 文件管理里把 .fap 拖进设备 <code>apps</code> 目录，设备上打开 应用 菜单即可使用。";
   }
 })();
 </script>
 <div class="grid2">
-<div class="card"><h3>📖 新手教程</h3><p>从拆箱、插卡、开机到刷固件的完整零基础说明，认真看完就能玩明白。</p><a class="btn btn-b" href="guide.html">从零开始学习</a></div>
+<div class="card"><h3>📖 新手教程</h3><p>从拆箱、插卡、开机到刷固件的完整零基础说明。</p><a class="btn btn-b" href="guide.html">从零开始学习</a></div>
 <div class="card"><h3>⬇ 固件下载</h3><p>官方 / Unleashed / RogueMaster / Momentum / 中文汉化固件，一键直达最新版。</p><a class="btn btn-b" href="firmware.html">固件下载与对比</a></div>
 <div class="card"><h3>📦 应用商店</h3><p>官方全部 503 个应用，全中文名+分类浏览+图标截图，官方编译版直接下载。</p><a class="btn btn-y" href="apps.html">打开应用商店</a></div>
 <div class="card"><h3>🗂 资源目录</h3><p>红外库、Sub-GHz 数据库、BadUSB、awesome 合集、QQ 交流群，分类直达。</p><a class="btn btn-b" href="resources.html">浏览资源目录</a></div>
 </div>
-<h2>热门固件</h2><div class="grid2">
-<div class="card"><h3>🔧 官方固件 1.5.1</h3><p>稳定、安全、官方支持。适合刚上手的新手。</p><a class="btn btn-y" href="firmware.html">查看与下载</a></div>
-<div class="card"><h3>⚡ Unleashed</h3><p>解除官方限制、功能最全，社区人气第一。</p><a class="btn btn-y" href="firmware.html">最新版下载</a></div>
-<div class="card"><h3>🎮 RogueMaster</h3><p>插件最丰富、界面最花哨的“玩具箱”。</p><a class="btn btn-y" href="firmware.html">最新版下载</a></div>
-<div class="card"><h3>🛠 Momentum</h3><p>Xtreme 的延续，可定制性天花板。</p><a class="btn btn-y" href="firmware.html">最新版下载</a></div>
-</div>
+<h2>热门固件速览</h2>
+<div class="acc open"><button class="acc-head">🔧 官方固件 1.5.1 <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner"><p>稳定、安全、官方支持，适合刚上手的新手。<a class="btn btn-y" href="firmware.html">查看与下载</a></p></div></div></div>
+<div class="acc"><button class="acc-head">⚡ Unleashed <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner"><p>解除官方限制、功能最全，社区人气第一。<a class="btn btn-y" href="firmware.html">最新版下载</a></p></div></div></div>
+<div class="acc"><button class="acc-head">🎮 RogueMaster <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner"><p>插件最丰富、界面最花哨的“玩具箱”。<a class="btn btn-y" href="firmware.html">最新版下载</a></p></div></div></div>
+<div class="acc"><button class="acc-head">🛠 Momentum <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner"><p>Xtreme 的延续，可定制性天花板。<a class="btn btn-y" href="firmware.html">最新版下载</a></p></div></div></div>
 <h2>为什么推荐本站</h2>
 <div class="card"><ul style="padding-left:20px">
 <li><b>全中文</b>：应用商店 503 个应用全部中文名+中文简介；</li>
@@ -80,4 +92,16 @@ footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
 </ul></div>
 
 <footer>本站由社区爱好者整理 · 仅供学习交流 · 请遵守当地法律法规，仅测试自己拥有或已获授权的设备</footer>
-</div></body></html>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  document.querySelectorAll(".acc-head").forEach(function(h){
+    h.addEventListener("click",function(){
+      var p=h.parentElement;
+      var was=p.classList.contains("open");
+      document.querySelectorAll(".acc.open").forEach(function(a){if(a!==p){a.classList.remove("open");}});
+      if(!was)p.classList.add("open");
+    });
+  });
+});
+</script></body></html>
