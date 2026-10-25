@@ -20,3 +20,32 @@ AIGC:
 - 审核标准：[docs/审核标准.md](docs/审核标准.md)
 - 免责声明：[docs/免责声明.md](docs/免责声明.md)
 *（内容由AI生成，仅供参考）*
+
+
+---
+
+## 🛍️ 应用商店（全量中文导航）
+
+收录 Flipper Lab 官方应用商店 **全部 504 个应用**（flipper-application-catalog），每个应用均有中文名、中文简介、官方安装链接与源码链接，并支持关键词搜索与分类筛选。
+
+- **在线搜索页**：[应用商店 · 中文搜索](应用商店/search.html)（支持中文/英文搜索，按分类筛选，点击直达官方安装）
+- **全量数据**：[apps.json](应用商店/apps.json)（504 条结构化数据，含中文名/中文简介/安装链接/源码链接）
+
+### 分类详细文档
+
+| 分类 | 应用数 | 详细文档 |
+|------|-------|---------|
+| 蓝牙 | 16 | [Bluetooth.md](应用商店/Bluetooth.md) |
+| 外设与传感器 | 118 | [GPIO.md](应用商店/GPIO.md) |
+| 游戏 | 117 | [Games.md](应用商店/Games.md) |
+| 红外 | 29 | [Infrared.md](应用商店/Infrared.md) |
+| 媒体 | 25 | [Media.md](应用商店/Media.md) |
+| NFC | 37 | [NFC.md](应用商店/NFC.md) |
+| RFID | 7 | [RFID.md](应用商店/RFID.md) |
+| Sub-GHz 无线电 | 24 | [Sub-GHz.md](应用商店/Sub-GHz.md) |
+| 工具 | 112 | [Tools.md](应用商店/Tools.md) |
+| USB | 17 | [USB.md](应用商店/USB.md) |
+| iButton | 2 | [iButton.md](应用商店/iButton.md) |
+| **合计** | **504** |  |
+
+> 提示：在手机/电脑上打开 search.html 即可搜索全部应用；每个分类文档内含该分类全部应用的中文介绍与安装链接。
