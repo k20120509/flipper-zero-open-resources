@@ -2,38 +2,51 @@
 <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>固件下载 · Flipper 中文资源站</title>
 <style>
+:root{--orange:#ff7d00;--orange2:#ff9d3c;--bg:#0d0d0d;--card:#171717;--card2:#1f1f1f;--line:#333;--txt:#f2f2f2;--sub:#9a9a9a}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#12122a;color:#eee;line-height:1.7}
-a{color:#4cc9f0}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.7}
+a{color:var(--orange2)}
 .container{max-width:1100px;margin:0 auto;padding:18px}
-h1{color:#ffd700;margin-bottom:14px}
-h2{color:#ffd700;font-size:1.2em;margin:24px 0 10px;border-left:4px solid #ffd700;padding-left:10px}
-.card{background:#16213e;border:1px solid #2a2a4a;border-radius:14px;padding:16px;margin-bottom:14px}
-.card h3{color:#ffd700;margin-bottom:6px}
+h1{color:var(--orange);margin-bottom:14px;text-shadow:0 0 30px rgba(255,125,0,.25)}
+h2{color:var(--orange);font-size:1.2em;margin:26px 0 10px;border-left:4px solid var(--orange);padding-left:10px}
+h3{color:var(--orange)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(255,125,0,.22);border-color:var(--orange)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
-.btn{display:inline-block;text-decoration:none;padding:9px 16px;border-radius:8px;margin:4px 6px 4px 0;font-size:.92em}
-.btn-y{background:#ffd700;color:#12122a;font-weight:bold}
-.btn-b{background:#4cc9f0;color:#12122a}
-.btn-g{background:#2a2a4a;color:#ccc}
-.install-banner{background:#1e1e3f;border:2px solid #ffd700;border-radius:12px;padding:12px 16px;margin:16px 0;font-size:.92em}
-.install-banner code{background:#0d0d24;padding:2px 6px;border-radius:5px;color:#7adcff}
-.step{background:#0f0f22;border-left:4px solid #4cc9f0;border-radius:8px;padding:12px 14px;margin:10px 0}
-.step b{color:#4cc9f0}
-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9em}
-th,td{border:1px solid #2a2a4a;padding:8px 10px;text-align:left}
-th{background:#2a2a4a;color:#ffd700}
-tr:nth-child(even){background:#0f0f22}
-.badge{display:inline-block;font-size:.72em;padding:2px 8px;border-radius:20px;background:#2a2a4a;color:#ccc;margin-right:4px}
-.badge.hot{background:rgba(255,215,0,.15);color:#ffd700}
-footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
-
-</style><style>
-.topnav{background:#0d0d24;border-bottom:2px solid #ffd700;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;position:sticky;top:0;z-index:50;flex-wrap:wrap;gap:6px}
-.topnav .logo{color:#ffd700;font-weight:bold;font-size:1.1em;text-decoration:none}
+.btn{display:inline-block;text-decoration:none;padding:10px 18px;border-radius:10px;margin:4px 6px 4px 0;font-size:.92em;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 6px 18px rgba(255,125,0,.4)}
+.btn-y{background:linear-gradient(135deg,#ff8c1a,#ff7d00);color:#111;font-weight:bold}
+.btn-b{background:linear-gradient(135deg,#ff9d3c,#ff7d00);color:#111}
+.btn-g{background:#262626;color:#ccc;border:1px solid var(--line)}
+.topnav{background:#0a0a0a;border-bottom:2px solid var(--orange);display:flex;justify-content:space-between;align-items:center;padding:10px 16px;position:sticky;top:0;z-index:50;flex-wrap:wrap;gap:6px;box-shadow:0 2px 14px rgba(255,125,0,.15)}
+.topnav .logo{color:var(--orange);font-weight:bold;font-size:1.1em;text-decoration:none}
 .topnav .navlinks{display:flex;gap:6px;flex-wrap:wrap}
-.topnav .navlinks a{color:#eee;text-decoration:none;font-size:.88em;padding:6px 10px;border-radius:8px}
-.topnav .navlinks a:hover{background:#2a2a4a;color:#ffd700}
+.topnav .navlinks a{color:#eee;text-decoration:none;font-size:.88em;padding:6px 10px;border-radius:8px;transition:.2s}
+.topnav .navlinks a:hover{background:var(--orange);color:#111;transform:translateY(-1px)}
 @media(max-width:600px){.topnav .navlinks{width:100%;justify-content:space-between}.topnav .navlinks a{font-size:.8em;padding:6px 4px}}
+.install-banner{background:linear-gradient(135deg,#1a1208,#241a08);border:2px solid var(--orange);border-radius:12px;padding:12px 16px;margin:16px 0;font-size:.92em;animation:fadeUp .6s ease}
+.install-banner code{background:#0a0a0a;padding:2px 6px;border-radius:5px;color:var(--orange2)}
+.step{background:#111;border-left:4px solid var(--orange);border-radius:8px;padding:12px 14px;margin:10px 0}
+.step b{color:var(--orange2)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9em}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+th{background:var(--card2);color:var(--orange)}
+tr:nth-child(even){background:#111}
+.badge{display:inline-block;font-size:.72em;padding:2px 8px;border-radius:20px;background:#2a2a2a;color:#ccc;margin-right:4px}
+.badge.hot{background:rgba(255,125,0,.18);color:var(--orange)}
+footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.fadeIn{animation:fadeUp .5s ease both}
+/* 折叠面板 accordion */
+.acc{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden;background:var(--card);transition:border-color .25s}
+.acc.open{border-color:var(--orange)}
+.acc-head{display:flex;justify-content:space-between;align-items:center;width:100%;background:var(--card2);color:var(--txt);border:none;padding:13px 16px;font-size:1em;cursor:pointer;font-weight:bold}
+.acc-head .arr{transition:transform .3s;color:var(--orange)}
+.acc.open .acc-head .arr{transform:rotate(90deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .5s ease;background:var(--card)}
+.acc.open .acc-body{max-height:2000px}
+.acc-inner{padding:14px 16px}
 </style></head><body>
 <div class="topnav" id="topnav">
 <a href="index.html" class="logo">🐬 Flipper 中文资源站</a>
@@ -43,10 +56,11 @@ footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
 </div>
 <div class="container">
 <h1>⬇ 固件下载与对比</h1>
-<div class="card" style="background:#1e1e3f;border-color:#ffd700">
-<p><b>固件 = 设备的操作系统。</b>官方固件最稳；第三方固件解锁更多功能。下载后用 qFlipper 的 <b>Install from file</b> 安装（教程见 <a href="guide.html">新手教程第 4 步</a>）。</p>
+<div class="card" style="background:linear-gradient(135deg,#1a1208,#241a08);border-color:#ff7d00">
+<p><b>固件 = 设备的操作系统。</b>官方固件最稳；第三方固件解锁更多功能。下载后用 qFlipper 的 <b>Install from file</b> 安装（教程见 <a href="guide.html">新手教程第 4 步</a>）。点击下方任意固件展开下载按钮。</p>
 </div>
 <h2>各固件对比</h2>
+<div class="acc open"><button class="acc-head">📊 固件对比表 <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner">
 <table><tr><th>固件</th><th>稳定性</th><th>功能强度</th><th>界面</th><th>更新频率</th><th>适合人群</th></tr>
 <tr><td>官方</td><td>⭐⭐⭐⭐⭐</td><td>⭐（受限）</td><td>简洁</td><td>慢而稳</td><td>新手/求稳</td></tr>
 <tr><td>Unleashed</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>实用</td><td>快</td><td>进阶玩家</td></tr>
@@ -54,28 +68,41 @@ footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
 <tr><td>Momentum</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>现代</td><td>快</td><td>追求定制</td></tr>
 <tr><td>中文汉化</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>全中文</td><td>较慢</td><td>小白/看不懂英文</td></tr>
 </table>
-<h2>一键下载</h2><div class="card"><h3>🔧 官方固件</h3>
-<p style="color:#aaa;font-size:.9em">版本：<b style="color:#ffd700">1.5.1</b> · 稳定、官方支持、协议完整；频率等受限</p>
-<p>适合人群：<span class="badge hot">新手首选</span></p>
+</div></div></div>
+<h2>一键下载（点击展开）</h2><div class="acc"><button class="acc-head">🔧 官方固件 · <span style="color:#ff7d00">1.5.1</span> <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner">
+<p>稳定、官方支持、协议完整；频率等受限</p><p>适合人群：<span class="badge hot">新手首选</span></p>
 <p><a class="btn btn-y" href="https://flipperzero.one/downloads" target="_blank">⬇ 官方更新工具 qFlipper</a><a class="btn btn-y" href="https://update.flipperzero.one" target="_blank">⬇ 网页更新</a></p>
-<a class="btn btn-g" href="https://github.com/flipperdevices/flipperzero-firmware" target="_blank">GitHub 仓库</a></div><div class="card"><h3>⚡ Unleashed</h3>
-<p style="color:#aaa;font-size:.9em">版本：<b style="color:#ffd700">unlshd-094 (2026-10-14)</b> · 解除频率/协议限制，功能全，社区第一</p>
-<p>适合人群：<span class="badge hot">进阶玩家最爱</span></p>
+<a class="btn btn-g" href="https://github.com/flipperdevices/flipperzero-firmware" target="_blank">GitHub 仓库</a>
+</div></div></div><div class="acc"><button class="acc-head">⚡ Unleashed · <span style="color:#ff7d00">unlshd-094 (2026-10-14)</span> <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner">
+<p>解除频率/协议限制，功能全，社区第一</p><p>适合人群：<span class="badge hot">进阶玩家最爱</span></p>
 <p><a class="btn btn-y" href="https://github.com/DarkFlippers/unleashed-firmware/releases/download/unlshd-094/flipper-z-f7-update-unlshd-094e.tgz" target="_blank">⬇ 更新包 094e（全功能）</a><a class="btn btn-y" href="https://github.com/DarkFlippers/unleashed-firmware/releases/download/unlshd-094/flipper-z-f7-update-unlshd-094.tgz" target="_blank">⬇ 更新包 094（标准）</a><a class="btn btn-y" href="https://github.com/DarkFlippers/unleashed-firmware/releases/download/unlshd-094/flipper-z-f7-update-unlshd-094.zip" target="_blank">⬇ ZIP 版</a></p>
-<a class="btn btn-g" href="https://github.com/DarkFlippers/unleashed-firmware" target="_blank">GitHub 仓库</a></div><div class="card"><h3>🎮 RogueMaster</h3>
-<p style="color:#aaa;font-size:.9em">版本：<b style="color:#ffd700">RM1024-1347 (2026-10-24)</b> · 插件最多、界面最花哨、更新最频繁</p>
-<p>适合人群：<span class="badge hot">爱折腾的玩家</span></p>
+<a class="btn btn-g" href="https://github.com/DarkFlippers/unleashed-firmware" target="_blank">GitHub 仓库</a>
+</div></div></div><div class="acc"><button class="acc-head">🎮 RogueMaster · <span style="color:#ff7d00">RM1024-1347 (2026-10-24)</span> <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner">
+<p>插件最多、界面最花哨、更新最频繁</p><p>适合人群：<span class="badge hot">爱折腾的玩家</span></p>
 <p><a class="btn btn-y" href="https://github.com/RogueMaster/flipperzero-firmware-wPlugins/releases/download/RM1024-1347-392a65c3/RM1024-1347-392a65c3.tgz" target="_blank">⬇ TGZ 更新包</a><a class="btn btn-y" href="https://github.com/RogueMaster/flipperzero-firmware-wPlugins/releases/download/RM1024-1347-392a65c3/RM1024-1347-392a65c3.zip" target="_blank">⬇ ZIP 更新包</a></p>
-<a class="btn btn-g" href="https://github.com/RogueMaster/flipperzero-firmware-wPlugins" target="_blank">GitHub 仓库</a></div><div class="card"><h3>🛠 Momentum</h3>
-<p style="color:#aaa;font-size:.9em">版本：<b style="color:#ffd700">见 Release</b> · Xtreme 的延续，可定制性最强、界面现代</p>
-<p>适合人群：<span class="badge hot">追求极致定制</span></p>
+<a class="btn btn-g" href="https://github.com/RogueMaster/flipperzero-firmware-wPlugins" target="_blank">GitHub 仓库</a>
+</div></div></div><div class="acc"><button class="acc-head">🛠 Momentum · <span style="color:#ff7d00">见 Release</span> <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner">
+<p>Xtreme 的延续，可定制性最强、界面现代</p><p>适合人群：<span class="badge hot">追求极致定制</span></p>
 <p><a class="btn btn-y" href="https://github.com/momentum-mod/flipperzero-firmware/releases/latest" target="_blank">⬇ 前往 Release</a></p>
-<a class="btn btn-g" href="https://github.com/momentum-mod/flipperzero-firmware" target="_blank">GitHub 仓库</a></div><div class="card"><h3>🌐 中文汉化固件</h3>
-<p style="color:#aaa;font-size:.9em">版本：<b style="color:#ffd700">公测版</b> · 界面深度汉化，小白友好（公测 QQ 群 530379583）</p>
-<p>适合人群：<span class="badge hot">看不懂英文菜单的必选</span></p>
+<a class="btn btn-g" href="https://github.com/momentum-mod/flipperzero-firmware" target="_blank">GitHub 仓库</a>
+</div></div></div><div class="acc"><button class="acc-head">🌐 中文汉化固件 · <span style="color:#ff7d00">公测版</span> <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner">
+<p>界面深度汉化，小白友好（公测 QQ 群 530379583）</p><p>适合人群：<span class="badge hot">看不懂英文菜单的必选</span></p>
 <p><a class="btn btn-y" href="https://github.com/lucky-zwx/FlipperZero-CN-Firmware" target="_blank">⬇ 项目主页</a><a class="btn btn-y" href="https://qm.qq.com/q/530379583" target="_blank">⬇ 中文固件交流群</a></p>
-<a class="btn btn-g" href="https://github.com/lucky-zwx/FlipperZero-CN-Firmware" target="_blank">GitHub 仓库</a></div>
+<a class="btn btn-g" href="https://github.com/lucky-zwx/FlipperZero-CN-Firmware" target="_blank">GitHub 仓库</a>
+</div></div></div>
 <div class="card"><p>💡 所有链接均为 GitHub 官方 Release 直链，随上游更新自动变化，本站会定期刷新。安装前建议先格式化 SD 卡，可避免按键绑定/应用异常。</p></div>
 
 <footer>本站由社区爱好者整理 · 仅供学习交流 · 请遵守当地法律法规，仅测试自己拥有或已获授权的设备</footer>
-</div></body></html>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  document.querySelectorAll(".acc-head").forEach(function(h){
+    h.addEventListener("click",function(){
+      var p=h.parentElement;
+      var was=p.classList.contains("open");
+      document.querySelectorAll(".acc.open").forEach(function(a){if(a!==p){a.classList.remove("open");}});
+      if(!was)p.classList.add("open");
+    });
+  });
+});
+</script></body></html>

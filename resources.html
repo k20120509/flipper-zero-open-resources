@@ -2,38 +2,51 @@
 <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>资源目录 · Flipper 中文资源站</title>
 <style>
+:root{--orange:#ff7d00;--orange2:#ff9d3c;--bg:#0d0d0d;--card:#171717;--card2:#1f1f1f;--line:#333;--txt:#f2f2f2;--sub:#9a9a9a}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#12122a;color:#eee;line-height:1.7}
-a{color:#4cc9f0}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.7}
+a{color:var(--orange2)}
 .container{max-width:1100px;margin:0 auto;padding:18px}
-h1{color:#ffd700;margin-bottom:14px}
-h2{color:#ffd700;font-size:1.2em;margin:24px 0 10px;border-left:4px solid #ffd700;padding-left:10px}
-.card{background:#16213e;border:1px solid #2a2a4a;border-radius:14px;padding:16px;margin-bottom:14px}
-.card h3{color:#ffd700;margin-bottom:6px}
+h1{color:var(--orange);margin-bottom:14px;text-shadow:0 0 30px rgba(255,125,0,.25)}
+h2{color:var(--orange);font-size:1.2em;margin:26px 0 10px;border-left:4px solid var(--orange);padding-left:10px}
+h3{color:var(--orange)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(255,125,0,.22);border-color:var(--orange)}
 .grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
-.btn{display:inline-block;text-decoration:none;padding:9px 16px;border-radius:8px;margin:4px 6px 4px 0;font-size:.92em}
-.btn-y{background:#ffd700;color:#12122a;font-weight:bold}
-.btn-b{background:#4cc9f0;color:#12122a}
-.btn-g{background:#2a2a4a;color:#ccc}
-.install-banner{background:#1e1e3f;border:2px solid #ffd700;border-radius:12px;padding:12px 16px;margin:16px 0;font-size:.92em}
-.install-banner code{background:#0d0d24;padding:2px 6px;border-radius:5px;color:#7adcff}
-.step{background:#0f0f22;border-left:4px solid #4cc9f0;border-radius:8px;padding:12px 14px;margin:10px 0}
-.step b{color:#4cc9f0}
-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9em}
-th,td{border:1px solid #2a2a4a;padding:8px 10px;text-align:left}
-th{background:#2a2a4a;color:#ffd700}
-tr:nth-child(even){background:#0f0f22}
-.badge{display:inline-block;font-size:.72em;padding:2px 8px;border-radius:20px;background:#2a2a4a;color:#ccc;margin-right:4px}
-.badge.hot{background:rgba(255,215,0,.15);color:#ffd700}
-footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
-
-</style><style>
-.topnav{background:#0d0d24;border-bottom:2px solid #ffd700;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;position:sticky;top:0;z-index:50;flex-wrap:wrap;gap:6px}
-.topnav .logo{color:#ffd700;font-weight:bold;font-size:1.1em;text-decoration:none}
+.btn{display:inline-block;text-decoration:none;padding:10px 18px;border-radius:10px;margin:4px 6px 4px 0;font-size:.92em;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 6px 18px rgba(255,125,0,.4)}
+.btn-y{background:linear-gradient(135deg,#ff8c1a,#ff7d00);color:#111;font-weight:bold}
+.btn-b{background:linear-gradient(135deg,#ff9d3c,#ff7d00);color:#111}
+.btn-g{background:#262626;color:#ccc;border:1px solid var(--line)}
+.topnav{background:#0a0a0a;border-bottom:2px solid var(--orange);display:flex;justify-content:space-between;align-items:center;padding:10px 16px;position:sticky;top:0;z-index:50;flex-wrap:wrap;gap:6px;box-shadow:0 2px 14px rgba(255,125,0,.15)}
+.topnav .logo{color:var(--orange);font-weight:bold;font-size:1.1em;text-decoration:none}
 .topnav .navlinks{display:flex;gap:6px;flex-wrap:wrap}
-.topnav .navlinks a{color:#eee;text-decoration:none;font-size:.88em;padding:6px 10px;border-radius:8px}
-.topnav .navlinks a:hover{background:#2a2a4a;color:#ffd700}
+.topnav .navlinks a{color:#eee;text-decoration:none;font-size:.88em;padding:6px 10px;border-radius:8px;transition:.2s}
+.topnav .navlinks a:hover{background:var(--orange);color:#111;transform:translateY(-1px)}
 @media(max-width:600px){.topnav .navlinks{width:100%;justify-content:space-between}.topnav .navlinks a{font-size:.8em;padding:6px 4px}}
+.install-banner{background:linear-gradient(135deg,#1a1208,#241a08);border:2px solid var(--orange);border-radius:12px;padding:12px 16px;margin:16px 0;font-size:.92em;animation:fadeUp .6s ease}
+.install-banner code{background:#0a0a0a;padding:2px 6px;border-radius:5px;color:var(--orange2)}
+.step{background:#111;border-left:4px solid var(--orange);border-radius:8px;padding:12px 14px;margin:10px 0}
+.step b{color:var(--orange2)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9em}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+th{background:var(--card2);color:var(--orange)}
+tr:nth-child(even){background:#111}
+.badge{display:inline-block;font-size:.72em;padding:2px 8px;border-radius:20px;background:#2a2a2a;color:#ccc;margin-right:4px}
+.badge.hot{background:rgba(255,125,0,.18);color:var(--orange)}
+footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.fadeIn{animation:fadeUp .5s ease both}
+/* 折叠面板 accordion */
+.acc{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden;background:var(--card);transition:border-color .25s}
+.acc.open{border-color:var(--orange)}
+.acc-head{display:flex;justify-content:space-between;align-items:center;width:100%;background:var(--card2);color:var(--txt);border:none;padding:13px 16px;font-size:1em;cursor:pointer;font-weight:bold}
+.acc-head .arr{transition:transform .3s;color:var(--orange)}
+.acc.open .acc-head .arr{transform:rotate(90deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .5s ease;background:var(--card)}
+.acc.open .acc-body{max-height:2000px}
+.acc-inner{padding:14px 16px}
 </style></head><body>
 <div class="topnav" id="topnav">
 <a href="index.html" class="logo">🐬 Flipper 中文资源站</a>
@@ -43,20 +56,32 @@ footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
 </div>
 <div class="container">
 <h1>🗂 资源目录</h1>
-<div class="card" style="background:#1e1e3f;border-color:#ffd700"><p>这里按分类整理全网高质量开源资源，点击即可跳转/下载。所有资源均来自公开开源项目，仅供学习交流。</p></div>
-<h2>📚 综合资源大合集</h2><div class="grid2"><div class="card"><h3>awesome-flipperzero（必收藏资源总目录）</h3><p>全球最大的 Flipper 资源清单，含固件/应用/教程/周边</p><a class="btn btn-b" href="https://github.com/djsime1/awesome-flipperzero" target="_blank">打开/下载 →</a></div><div class="card"><h3>UberGuidoZ/Flipper（全球最大文件库）</h3><p>IR/NFC/SubGHz/BadUSB 全分类文件库</p><a class="btn btn-b" href="https://github.com/UberGuidoZ/Flipper" target="_blank">打开/下载 →</a></div><div class="card"><h3>awesome-flipperzero-i18n（中文翻译版）</h3><p>awesome 清单中文版</p><a class="btn btn-b" href="https://github.com/kalicyh/awesome-flipperzero-i18n" target="_blank">打开/下载 →</a></div></div><h2>📡 红外遥控库 (IRDB)</h2><div class="grid2"><div class="card"><h3>Flipper-IRDB（含国内品牌）</h3><p>格力/美的/小米/华为/TCL 等国内家电遥控码</p><a class="btn btn-b" href="https://github.com/Lucaslhm/Flipper-IRDB" target="_blank">打开/下载 →</a></div><div class="card"><h3>logickworkshop/Flipper-IRDB</h3><p>原始分类详尽的红外数据库</p><a class="btn btn-b" href="https://github.com/logickworkshop/Flipper-IRDB" target="_blank">打开/下载 →</a></div></div><h2>📶 Sub-GHz 信号库</h2><div class="grid2"><div class="card"><h3>FlipperZero-Subghz-DB（13000+ 信号）</h3><p>门禁/车库/遥控最全信号合集</p><a class="btn btn-b" href="https://github.com/Zero-Sploit/FlipperZero-Subghz-DB" target="_blank">打开/下载 →</a></div><div class="card"><h3>UberGuidoZ/Flipper-SGDB</h3><p>UberGuidoZ 车库信号库</p><a class="btn btn-b" href="https://github.com/UberGuidoZ/Flipper-SGDB" target="_blank">打开/下载 →</a></div><div class="card"><h3>Full_Flipper_Database</h3><p>多源整合综合信号库</p><a class="btn btn-b" href="https://github.com/DefinetlyNotAI/Full_Flipper_Database" target="_blank">打开/下载 →</a></div><div class="card"><h3>flipperzero-subbrute</h3><p>SubGHz 协议暴力破解验证</p><a class="btn btn-b" href="https://github.com/DarkFlippers/flipperzero-subbrute" target="_blank">打开/下载 →</a></div></div><h2>🔓 门禁卡 / NFC 工具</h2><div class="grid2"><div class="card"><h3>Mfkey32-dictionary（M1 门禁字典）</h3><p>超大 M1 字典（仅限合法测试）</p><a class="btn btn-b" href="https://github.com/RustySchackelford000/Flipper-Zero-Mfkey32-dictionary" target="_blank">打开/下载 →</a></div><div class="card"><h3>FlipperAmiibo</h3><p>Amiibo NFC 标签收藏</p><a class="btn btn-b" href="https://github.com/Gioman101/FlipperAmiibo" target="_blank">打开/下载 →</a></div></div><h2>🧩 应用与插件</h2><div class="grid2"><div class="card"><h3>all-the-plugins（fap 插件大合集）</h3><p>第三方 fap 插件全集</p><a class="btn btn-b" href="https://github.com/xMasterX/all-the-plugins" target="_blank">打开/下载 →</a></div><div class="card"><h3>fap-list（预编译 fap 清单）</h3><p>预编译应用清单</p><a class="btn btn-b" href="https://github.com/playmean/fap-list" target="_blank">打开/下载 →</a></div><div class="card"><h3>flipc.org（第三方应用市场）</h3><p>网页版第三方应用市场</p><a class="btn btn-b" href="https://flipc.org/" target="_blank">打开/下载 →</a></div></div><h2>🛠 开发与工具</h2><div class="grid2"><div class="card"><h3>uFBT（官方构建工具）</h3><p>编译 fap 的官方工具链</p><a class="btn btn-b" href="https://github.com/flipperdevices/flipperzero-ufbt" target="_blank">打开/下载 →</a></div><div class="card"><h3>qFlipper 下载</h3><p>官方电脑客户端</p><a class="btn btn-b" href="https://flipperzero.one/downloads" target="_blank">打开/下载 →</a></div><div class="card"><h3>Flipper 官方文档</h3><p>最权威的操作手册</p><a class="btn btn-b" href="https://docs.flipperzero.one/" target="_blank">打开/下载 →</a></div><div class="card"><h3>官方论坛</h3><p>官方支持论坛</p><a class="btn btn-b" href="https://forum.flipperzero.one/" target="_blank">打开/下载 →</a></div></div><h2>🇨🇳 中文社区站点</h2><div class="grid2"><div class="card"><h3>宅人改造家 flippercn.com</h3><p>国内老牌中文站：固件/工具/视频教程/网盘下载</p><a class="btn btn-b" href="https://flippercn.com/" target="_blank">打开/下载 →</a></div><div class="card"><h3>FlipperCN 工具下载页</h3><p>qFlipper/手机App/FlipperNested/Mifare 在线分析</p><a class="btn btn-b" href="https://flippercn.com/download/index.html" target="_blank">打开/下载 →</a></div><div class="card"><h3>FlipperCN 视频教程</h3><p>12 集中文视频教学（含救砖/解卡）</p><a class="btn btn-b" href="https://flippercn.com/video/index.html" target="_blank">打开/下载 →</a></div><div class="card"><h3>B站：Flipper Zero 新手教程</h3><p>新手教程+资源干货视频</p><a class="btn btn-b" href="https://www.bilibili.com/video/BV1Bc411A7f1/" target="_blank">打开/下载 →</a></div></div>
+<div class="card" style="background:linear-gradient(135deg,#1a1208,#241a08);border-color:#ff7d00"><p>这里按分类整理全网高质量开源资源，点击分类展开查看。所有资源均来自公开开源项目，仅供学习交流。</p></div>
+<div class="acc open"><button class="acc-head">📚 综合资源大合集 <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner"><div class="card" style="margin-bottom:10px"><h3>awesome-flipperzero（必收藏资源总目录）</h3><p style="color:#9a9a9a;font-size:.9em">全球最大的 Flipper 资源清单，含固件/应用/教程/周边</p><a class="btn btn-b" href="https://github.com/djsime1/awesome-flipperzero" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>UberGuidoZ/Flipper（全球最大文件库）</h3><p style="color:#9a9a9a;font-size:.9em">IR/NFC/SubGHz/BadUSB 全分类文件库</p><a class="btn btn-b" href="https://github.com/UberGuidoZ/Flipper" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>awesome-flipperzero-i18n（中文翻译版）</h3><p style="color:#9a9a9a;font-size:.9em">awesome 清单中文版</p><a class="btn btn-b" href="https://github.com/kalicyh/awesome-flipperzero-i18n" target="_blank">打开/下载 →</a></div></div></div></div><div class="acc"><button class="acc-head">📡 红外遥控库 (IRDB) <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner"><div class="card" style="margin-bottom:10px"><h3>Flipper-IRDB（含国内品牌）</h3><p style="color:#9a9a9a;font-size:.9em">格力/美的/小米/华为/TCL 等国内家电遥控码</p><a class="btn btn-b" href="https://github.com/Lucaslhm/Flipper-IRDB" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>logickworkshop/Flipper-IRDB</h3><p style="color:#9a9a9a;font-size:.9em">原始分类详尽的红外数据库</p><a class="btn btn-b" href="https://github.com/logickworkshop/Flipper-IRDB" target="_blank">打开/下载 →</a></div></div></div></div><div class="acc"><button class="acc-head">📶 Sub-GHz 信号库 <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner"><div class="card" style="margin-bottom:10px"><h3>FlipperZero-Subghz-DB（13000+ 信号）</h3><p style="color:#9a9a9a;font-size:.9em">门禁/车库/遥控最全信号合集</p><a class="btn btn-b" href="https://github.com/Zero-Sploit/FlipperZero-Subghz-DB" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>UberGuidoZ/Flipper-SGDB</h3><p style="color:#9a9a9a;font-size:.9em">UberGuidoZ 车库信号库</p><a class="btn btn-b" href="https://github.com/UberGuidoZ/Flipper-SGDB" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>Full_Flipper_Database</h3><p style="color:#9a9a9a;font-size:.9em">多源整合综合信号库</p><a class="btn btn-b" href="https://github.com/DefinetlyNotAI/Full_Flipper_Database" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>flipperzero-subbrute</h3><p style="color:#9a9a9a;font-size:.9em">SubGHz 协议暴力破解验证</p><a class="btn btn-b" href="https://github.com/DarkFlippers/flipperzero-subbrute" target="_blank">打开/下载 →</a></div></div></div></div><div class="acc"><button class="acc-head">🔓 门禁卡 / NFC 工具 <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner"><div class="card" style="margin-bottom:10px"><h3>Mfkey32-dictionary（M1 门禁字典）</h3><p style="color:#9a9a9a;font-size:.9em">超大 M1 字典（仅限合法测试）</p><a class="btn btn-b" href="https://github.com/RustySchackelford000/Flipper-Zero-Mfkey32-dictionary" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>FlipperAmiibo</h3><p style="color:#9a9a9a;font-size:.9em">Amiibo NFC 标签收藏</p><a class="btn btn-b" href="https://github.com/Gioman101/FlipperAmiibo" target="_blank">打开/下载 →</a></div></div></div></div><div class="acc"><button class="acc-head">🧩 应用与插件 <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner"><div class="card" style="margin-bottom:10px"><h3>all-the-plugins（fap 插件大合集）</h3><p style="color:#9a9a9a;font-size:.9em">第三方 fap 插件全集</p><a class="btn btn-b" href="https://github.com/xMasterX/all-the-plugins" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>fap-list（预编译 fap 清单）</h3><p style="color:#9a9a9a;font-size:.9em">预编译应用清单</p><a class="btn btn-b" href="https://github.com/playmean/fap-list" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>flipc.org（第三方应用市场）</h3><p style="color:#9a9a9a;font-size:.9em">网页版第三方应用市场</p><a class="btn btn-b" href="https://flipc.org/" target="_blank">打开/下载 →</a></div></div></div></div><div class="acc"><button class="acc-head">🛠 开发与工具 <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner"><div class="card" style="margin-bottom:10px"><h3>uFBT（官方构建工具）</h3><p style="color:#9a9a9a;font-size:.9em">编译 fap 的官方工具链</p><a class="btn btn-b" href="https://github.com/flipperdevices/flipperzero-ufbt" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>qFlipper 下载</h3><p style="color:#9a9a9a;font-size:.9em">官方电脑客户端</p><a class="btn btn-b" href="https://flipperzero.one/downloads" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>Flipper 官方文档</h3><p style="color:#9a9a9a;font-size:.9em">最权威的操作手册</p><a class="btn btn-b" href="https://docs.flipperzero.one/" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>官方论坛</h3><p style="color:#9a9a9a;font-size:.9em">官方支持论坛</p><a class="btn btn-b" href="https://forum.flipperzero.one/" target="_blank">打开/下载 →</a></div></div></div></div><div class="acc"><button class="acc-head">🇨🇳 中文社区站点 <span class="arr">▶</span></button><div class="acc-body"><div class="acc-inner"><div class="card" style="margin-bottom:10px"><h3>宅人改造家 flippercn.com</h3><p style="color:#9a9a9a;font-size:.9em">国内老牌中文站：固件/工具/视频教程/网盘下载</p><a class="btn btn-b" href="https://flippercn.com/" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>FlipperCN 工具下载页</h3><p style="color:#9a9a9a;font-size:.9em">qFlipper/手机App/FlipperNested/Mifare 在线分析</p><a class="btn btn-b" href="https://flippercn.com/download/index.html" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>FlipperCN 视频教程</h3><p style="color:#9a9a9a;font-size:.9em">12 集中文视频教学（含救砖/解卡）</p><a class="btn btn-b" href="https://flippercn.com/video/index.html" target="_blank">打开/下载 →</a></div><div class="card" style="margin-bottom:10px"><h3>B站：Flipper Zero 新手教程</h3><p style="color:#9a9a9a;font-size:.9em">新手教程+资源干货视频</p><a class="btn btn-b" href="https://www.bilibili.com/video/BV1Bc411A7f1/" target="_blank">打开/下载 →</a></div></div></div></div>
 
 <h2>💬 国内交流群（QQ）</h2>
 <div class="grid2">
-<div class="card"><h3>FlipperZero 中文固件公测群</h3><p>群号：<b style="color:#ffd700">530379583</b><br>lucky-zwx 汉化固件的官方公测群，交流固件、报 bug、提问都行。</p>
+<div class="card"><h3>FlipperZero 中文固件公测群</h3><p>群号：<b style="color:#ff7d00">530379583</b><br>lucky-zwx 汉化固件的官方公测群，交流固件、报 bug、提问都行。</p>
 <a class="btn btn-y" href="https://qm.qq.com/q/530379583" target="_blank">点击加群</a></div>
-<div class="card"><h3>Momentum 汉化版交流群</h3><p>群号：<b style="color:#ffd700">716547787</b><br>kalicyh/Momentum-Firmware-CN 交流群，讨论 Momentum 中文版与定制。</p>
+<div class="card"><h3>Momentum 汉化版交流群</h3><p>群号：<b style="color:#ff7d00">716547787</b><br>kalicyh/Momentum-Firmware-CN 交流群，讨论 Momentum 中文版与定制。</p>
 <a class="btn btn-y" href="https://qm.qq.com/q/716547787" target="_blank">点击加群</a></div>
 <div class="card"><h3>宅人改造家（中文社区）</h3><p>国内老牌 Flipper 中文站，提供付费中文固件、工具与 12 集视频教程。</p>
 <a class="btn btn-b" href="https://flippercn.com/" target="_blank">访问站点</a></div>
 </div>
-<div class="card" style="background:#1e1e3f;border-color:#ffd700"><p>⚠️ 群号来自各固件项目 README 与公开资料，如失效请在本仓库提交 Issue 反馈，我们会及时更新。</p></div>
+<div class="card" style="background:linear-gradient(135deg,#1a1208,#241a08);border-color:#ff7d00"><p>⚠️ 群号来自各固件项目 README 与公开资料，如失效请在本仓库提交 Issue 反馈，我们会及时更新。</p></div>
 
 
 <footer>本站由社区爱好者整理 · 仅供学习交流 · 请遵守当地法律法规，仅测试自己拥有或已获授权的设备</footer>
-</div></body></html>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  document.querySelectorAll(".acc-head").forEach(function(h){
+    h.addEventListener("click",function(){
+      var p=h.parentElement;
+      var was=p.classList.contains("open");
+      document.querySelectorAll(".acc.open").forEach(function(a){if(a!==p){a.classList.remove("open");}});
+      if(!was)p.classList.add("open");
+    });
+  });
+});
+</script></body></html>
