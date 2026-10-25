@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>新手教程 · Flipper 中文资源站</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#12122a;color:#eee;line-height:1.7}
+a{color:#4cc9f0}
+.container{max-width:1100px;margin:0 auto;padding:18px}
+h1{color:#ffd700;margin-bottom:14px}
+h2{color:#ffd700;font-size:1.2em;margin:24px 0 10px;border-left:4px solid #ffd700;padding-left:10px}
+.card{background:#16213e;border:1px solid #2a2a4a;border-radius:14px;padding:16px;margin-bottom:14px}
+.card h3{color:#ffd700;margin-bottom:6px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.btn{display:inline-block;text-decoration:none;padding:9px 16px;border-radius:8px;margin:4px 6px 4px 0;font-size:.92em}
+.btn-y{background:#ffd700;color:#12122a;font-weight:bold}
+.btn-b{background:#4cc9f0;color:#12122a}
+.btn-g{background:#2a2a4a;color:#ccc}
+.install-banner{background:#1e1e3f;border:2px solid #ffd700;border-radius:12px;padding:12px 16px;margin:16px 0;font-size:.92em}
+.install-banner code{background:#0d0d24;padding:2px 6px;border-radius:5px;color:#7adcff}
+.step{background:#0f0f22;border-left:4px solid #4cc9f0;border-radius:8px;padding:12px 14px;margin:10px 0}
+.step b{color:#4cc9f0}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9em}
+th,td{border:1px solid #2a2a4a;padding:8px 10px;text-align:left}
+th{background:#2a2a4a;color:#ffd700}
+tr:nth-child(even){background:#0f0f22}
+.badge{display:inline-block;font-size:.72em;padding:2px 8px;border-radius:20px;background:#2a2a4a;color:#ccc;margin-right:4px}
+.badge.hot{background:rgba(255,215,0,.15);color:#ffd700}
+footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
+
+</style><style>
+.topnav{background:#0d0d24;border-bottom:2px solid #ffd700;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;position:sticky;top:0;z-index:50;flex-wrap:wrap;gap:6px}
+.topnav .logo{color:#ffd700;font-weight:bold;font-size:1.1em;text-decoration:none}
+.topnav .navlinks{display:flex;gap:6px;flex-wrap:wrap}
+.topnav .navlinks a{color:#eee;text-decoration:none;font-size:.88em;padding:6px 10px;border-radius:8px}
+.topnav .navlinks a:hover{background:#2a2a4a;color:#ffd700}
+@media(max-width:600px){.topnav .navlinks{width:100%;justify-content:space-between}.topnav .navlinks a{font-size:.8em;padding:6px 4px}}
+</style></head><body>
+<div class="topnav" id="topnav">
+<a href="index.html" class="logo">🐬 Flipper 中文资源站</a>
+<div class="navlinks">
+<a href="index.html">首页</a><a href="guide.html">新手教程</a><a href="firmware.html">固件下载</a><a href="apps.html">应用商店</a><a href="resources.html">资源目录</a>
+</div>
+</div>
+<div class="container">
+<h1>📖 新手教程：从零开始玩转 Flipper Zero</h1>
+<div class="card" style="background:#1e1e3f;border-color:#ffd700">
+<p><b>写给小白的话：</b>Flipper Zero 是一只“电子宠物”外观的多功能无线探索工具，能读卡、遥控、抓信号。本教程按顺序看完（约 10 分钟），你就能独立完成开箱到刷固件、装应用的全部操作。</p>
+</div>
+<h2>第 1 步：开箱与配件</h2>
+<div class="card">
+<p>包装里一般有：Flipper Zero 主机、Type-C 数据线、保护壳、屏幕贴膜。</p>
+<p><b>必须自备：</b>一张 <b>microSD 存储卡</b>（建议 16GB 以上，品牌卡即可）。设备本身没有存储，所有数据都存在 SD 卡里。</p>
+</div>
+<h2>第 2 步：装卡 + 开机</h2>
+<div class="step"><b>①</b> 把 microSD 卡插入设备底部卡槽（注意方向，金手指朝内）；</div>
+<div class="step"><b>②</b> 长按左侧<b>返回键</b>开机，屏幕出现小海豚动画即成功；</div>
+<div class="step"><b>③</b> 首次开机会提示“初始化 SD 卡”，选择 <b>Yes</b> 格式化即可；</div>
+<div class="step"><b>④</b> 屏幕四周键：<b>方向键</b>移动、<b>OK 键</b>确认、<b>返回键</b>退出/关机（长按）。</div>
+<h2>第 3 步：连接电脑（安装固件的必经之路）</h2>
+<div class="card">
+<p>① 电脑上下载官方客户端 <b>qFlipper</b>：<a href="https://flipperzero.one/downloads" target="_blank">flipperzero.one/downloads</a>（Windows/macOS/Linux 都有）；<br>
+② 用 Type-C 数据线连接设备和电脑；<br>
+③ 打开 qFlipper，会自动识别设备（能看到设备屏幕画面）。</p>
+<p>用手机也可以：安装官方 <b>Flipper Mobile App</b>（应用商店搜索），通过蓝牙连接管理文件。</p>
+</div>
+<h2>第 4 步：刷固件（给海豚换“系统”）</h2>
+<div class="card">
+<p>官方固件稳定但功能受限；第三方固件解锁更多功能。刷机方法：</p>
+<div class="step"><b>①</b> 到本站 <a href="firmware.html">固件下载页</a> 选一个固件，下载更新包（如 <code>flipper-z-f7-update-xxx.tgz</code>）；</div>
+<div class="step"><b>②</b> 打开 qFlipper，点击右上角 <b>Install from file</b> 选择下载的固件包；</div>
+<div class="step"><b>③</b> 点击 <b>INSTALL</b>，等待进度条走完，设备自动重启；</div>
+<div class="step"><b>④</b> 重启后进入设置确认版本号，即刷机成功。</div>
+<p>💡 新手建议先玩几天官方固件，熟悉操作后再换第三方固件。中文汉化固件适合界面看不懂的同学。</p>
+</div>
+<h2>第 5 步：安装应用（.fap 文件）</h2>
+<div class="card">
+<p>Flipper 的应用叫 <b>fap</b>（Flipper Application Package）。安装方法：</p>
+<div class="step"><b>①</b> 打开本站 <a href="apps.html">应用商店</a>，搜索或分类找到应用；</div>
+<div class="step"><b>②</b> 点黄色按钮 <b>直接下载 fap</b> 得到 .fap 文件；</div>
+<div class="step"><b>③</b> 通过 qFlipper（电脑）或手机 App 把文件放入设备 SD 卡的 <code>apps</code> 文件夹（可建分类子文件夹，如 apps/Games）；</div>
+<div class="step"><b>④</b> 设备上打开 <b>应用</b> 菜单，即可看到并运行新应用。</div>
+<p>💡 若设备提示“找不到应用”，重启设备或检查文件是否在 <code>apps</code> 目录下。</p>
+</div>
+<h2>第 6 步：常见玩法入门</h2>
+<table><tr><th>玩法</th><th>入口</th><th>说明</th></tr>
+<tr><td>红外遥控</td><td>红外 → 学习新遥控</td><td>对着电视/空调遥控器录制，之后用 Flipper 控制</td></tr>
+<tr><td>读门禁卡</td><td>RFID → 读取</td><td>读取 125kHz 卡（仅限你自己的卡，测试用）</td></tr>
+<tr><td>NFC 卡</td><td>NFC → 读取</td><td>读 13.56MHz 卡/标签，可备份自己的卡</td></tr>
+<tr><td>Sub-GHz 抓信号</td><td>Sub-GHz → 读取</td><td>捕捉 300-928MHz 遥控信号（遵守当地法规）</td></tr>
+<tr><td>模拟键盘</td><td>USB → 远程</td><td>插上电脑当键盘/鼠标，可跑 BadUSB 脚本</td></tr>
+<tr><td>蓝牙遥控</td><td>蓝牙 → 远程</td><td>无线控制手机/电脑演示翻页等</td></tr>
+</table>
+<h2>第 7 步：遇到问题怎么办</h2>
+<div class="card"><ul style="padding-left:20px">
+<li><b>死机/黑屏</b>：同时按住左键+返回键 30 秒强制重启；</li>
+<li><b>刷坏了（变砖）</b>：不用慌，进入 DFU 模式（按住左键+返回键插电脑），用 qFlipper 恢复官方固件；</li>
+<li><b>按键绑定报错</b>：重刷后去 设置→按键绑定 重置一遍；</li>
+<li><b>汉化固件闪退</b>：第三方资源包里的 Fonts 目录要删掉，否则中文固件会失效；</li>
+<li><b>还是不会？</b>：加交流群问老玩家（见 <a href="resources.html">资源目录-交流群</a>）。</li>
+</ul></div>
+<h2>合法性提醒（必读）</h2>
+<div class="card" style="border-color:#ff6b6b">
+<p>Flipper Zero 是学习与安全测试工具。<b>只允许测试你自己拥有或已获明确授权的设备</b>（自己的卡、自己的遥控器、自己的门禁）。未经授权读取/复制他人门禁卡、车钥匙、干扰公共设备属违法行为，请务必遵守当地法律法规。</p>
+</div>
+
+<footer>本站由社区爱好者整理 · 仅供学习交流 · 请遵守当地法律法规，仅测试自己拥有或已获授权的设备</footer>
+</div></body></html>

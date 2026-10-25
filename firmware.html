@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>固件下载 · Flipper 中文资源站</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#12122a;color:#eee;line-height:1.7}
+a{color:#4cc9f0}
+.container{max-width:1100px;margin:0 auto;padding:18px}
+h1{color:#ffd700;margin-bottom:14px}
+h2{color:#ffd700;font-size:1.2em;margin:24px 0 10px;border-left:4px solid #ffd700;padding-left:10px}
+.card{background:#16213e;border:1px solid #2a2a4a;border-radius:14px;padding:16px;margin-bottom:14px}
+.card h3{color:#ffd700;margin-bottom:6px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.btn{display:inline-block;text-decoration:none;padding:9px 16px;border-radius:8px;margin:4px 6px 4px 0;font-size:.92em}
+.btn-y{background:#ffd700;color:#12122a;font-weight:bold}
+.btn-b{background:#4cc9f0;color:#12122a}
+.btn-g{background:#2a2a4a;color:#ccc}
+.install-banner{background:#1e1e3f;border:2px solid #ffd700;border-radius:12px;padding:12px 16px;margin:16px 0;font-size:.92em}
+.install-banner code{background:#0d0d24;padding:2px 6px;border-radius:5px;color:#7adcff}
+.step{background:#0f0f22;border-left:4px solid #4cc9f0;border-radius:8px;padding:12px 14px;margin:10px 0}
+.step b{color:#4cc9f0}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9em}
+th,td{border:1px solid #2a2a4a;padding:8px 10px;text-align:left}
+th{background:#2a2a4a;color:#ffd700}
+tr:nth-child(even){background:#0f0f22}
+.badge{display:inline-block;font-size:.72em;padding:2px 8px;border-radius:20px;background:#2a2a4a;color:#ccc;margin-right:4px}
+.badge.hot{background:rgba(255,215,0,.15);color:#ffd700}
+footer{text-align:center;color:#555;margin:30px 0 16px;font-size:.8em}
+
+</style><style>
+.topnav{background:#0d0d24;border-bottom:2px solid #ffd700;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;position:sticky;top:0;z-index:50;flex-wrap:wrap;gap:6px}
+.topnav .logo{color:#ffd700;font-weight:bold;font-size:1.1em;text-decoration:none}
+.topnav .navlinks{display:flex;gap:6px;flex-wrap:wrap}
+.topnav .navlinks a{color:#eee;text-decoration:none;font-size:.88em;padding:6px 10px;border-radius:8px}
+.topnav .navlinks a:hover{background:#2a2a4a;color:#ffd700}
+@media(max-width:600px){.topnav .navlinks{width:100%;justify-content:space-between}.topnav .navlinks a{font-size:.8em;padding:6px 4px}}
+</style></head><body>
+<div class="topnav" id="topnav">
+<a href="index.html" class="logo">🐬 Flipper 中文资源站</a>
+<div class="navlinks">
+<a href="index.html">首页</a><a href="guide.html">新手教程</a><a href="firmware.html">固件下载</a><a href="apps.html">应用商店</a><a href="resources.html">资源目录</a>
+</div>
+</div>
+<div class="container">
+<h1>⬇ 固件下载与对比</h1>
+<div class="card" style="background:#1e1e3f;border-color:#ffd700">
+<p><b>固件 = 设备的操作系统。</b>官方固件最稳；第三方固件解锁更多功能。下载后用 qFlipper 的 <b>Install from file</b> 安装（教程见 <a href="guide.html">新手教程第 4 步</a>）。</p>
+</div>
+<h2>各固件对比</h2>
+<table><tr><th>固件</th><th>稳定性</th><th>功能强度</th><th>界面</th><th>更新频率</th><th>适合人群</th></tr>
+<tr><td>官方</td><td>⭐⭐⭐⭐⭐</td><td>⭐（受限）</td><td>简洁</td><td>慢而稳</td><td>新手/求稳</td></tr>
+<tr><td>Unleashed</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>实用</td><td>快</td><td>进阶玩家</td></tr>
+<tr><td>RogueMaster</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>花哨</td><td>极快</td><td>爱折腾</td></tr>
+<tr><td>Momentum</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>现代</td><td>快</td><td>追求定制</td></tr>
+<tr><td>中文汉化</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>全中文</td><td>较慢</td><td>小白/看不懂英文</td></tr>
+</table>
+<h2>一键下载</h2><div class="card"><h3>🔧 官方固件</h3>
+<p style="color:#aaa;font-size:.9em">版本：<b style="color:#ffd700">1.5.1</b> · 稳定、官方支持、协议完整；频率等受限</p>
+<p>适合人群：<span class="badge hot">新手首选</span></p>
+<p><a class="btn btn-y" href="https://flipperzero.one/downloads" target="_blank">⬇ 官方更新工具 qFlipper</a><a class="btn btn-y" href="https://update.flipperzero.one" target="_blank">⬇ 网页更新</a></p>
+<a class="btn btn-g" href="https://github.com/flipperdevices/flipperzero-firmware" target="_blank">GitHub 仓库</a></div><div class="card"><h3>⚡ Unleashed</h3>
+<p style="color:#aaa;font-size:.9em">版本：<b style="color:#ffd700">unlshd-094 (2026-10-14)</b> · 解除频率/协议限制，功能全，社区第一</p>
+<p>适合人群：<span class="badge hot">进阶玩家最爱</span></p>
+<p><a class="btn btn-y" href="https://github.com/DarkFlippers/unleashed-firmware/releases/download/unlshd-094/flipper-z-f7-update-unlshd-094e.tgz" target="_blank">⬇ 更新包 094e（全功能）</a><a class="btn btn-y" href="https://github.com/DarkFlippers/unleashed-firmware/releases/download/unlshd-094/flipper-z-f7-update-unlshd-094.tgz" target="_blank">⬇ 更新包 094（标准）</a><a class="btn btn-y" href="https://github.com/DarkFlippers/unleashed-firmware/releases/download/unlshd-094/flipper-z-f7-update-unlshd-094.zip" target="_blank">⬇ ZIP 版</a></p>
+<a class="btn btn-g" href="https://github.com/DarkFlippers/unleashed-firmware" target="_blank">GitHub 仓库</a></div><div class="card"><h3>🎮 RogueMaster</h3>
+<p style="color:#aaa;font-size:.9em">版本：<b style="color:#ffd700">RM1024-1347 (2026-10-24)</b> · 插件最多、界面最花哨、更新最频繁</p>
+<p>适合人群：<span class="badge hot">爱折腾的玩家</span></p>
+<p><a class="btn btn-y" href="https://github.com/RogueMaster/flipperzero-firmware-wPlugins/releases/download/RM1024-1347-392a65c3/RM1024-1347-392a65c3.tgz" target="_blank">⬇ TGZ 更新包</a><a class="btn btn-y" href="https://github.com/RogueMaster/flipperzero-firmware-wPlugins/releases/download/RM1024-1347-392a65c3/RM1024-1347-392a65c3.zip" target="_blank">⬇ ZIP 更新包</a></p>
+<a class="btn btn-g" href="https://github.com/RogueMaster/flipperzero-firmware-wPlugins" target="_blank">GitHub 仓库</a></div><div class="card"><h3>🛠 Momentum</h3>
+<p style="color:#aaa;font-size:.9em">版本：<b style="color:#ffd700">见 Release</b> · Xtreme 的延续，可定制性最强、界面现代</p>
+<p>适合人群：<span class="badge hot">追求极致定制</span></p>
+<p><a class="btn btn-y" href="https://github.com/momentum-mod/flipperzero-firmware/releases/latest" target="_blank">⬇ 前往 Release</a></p>
+<a class="btn btn-g" href="https://github.com/momentum-mod/flipperzero-firmware" target="_blank">GitHub 仓库</a></div><div class="card"><h3>🌐 中文汉化固件</h3>
+<p style="color:#aaa;font-size:.9em">版本：<b style="color:#ffd700">公测版</b> · 界面深度汉化，小白友好（公测 QQ 群 530379583）</p>
+<p>适合人群：<span class="badge hot">看不懂英文菜单的必选</span></p>
+<p><a class="btn btn-y" href="https://github.com/lucky-zwx/FlipperZero-CN-Firmware" target="_blank">⬇ 项目主页</a><a class="btn btn-y" href="https://qm.qq.com/q/530379583" target="_blank">⬇ 中文固件交流群</a></p>
+<a class="btn btn-g" href="https://github.com/lucky-zwx/FlipperZero-CN-Firmware" target="_blank">GitHub 仓库</a></div>
+<div class="card"><p>💡 所有链接均为 GitHub 官方 Release 直链，随上游更新自动变化，本站会定期刷新。安装前建议先格式化 SD 卡，可避免按键绑定/应用异常。</p></div>
+
+<footer>本站由社区爱好者整理 · 仅供学习交流 · 请遵守当地法律法规，仅测试自己拥有或已获授权的设备</footer>
+</div></body></html>
